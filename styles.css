@@ -1,0 +1,753 @@
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #2B2B82;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-text {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.125rem;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s, outline 0.2s;
+}
+
+.header-links a:hover,
+.header-links a:focus {
+  color: #ff9900;
+  outline: 2px solid #ff9900;
+  outline-offset: 2px;
+}
+
+.header-links .icon {
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+}
+
+/* Banner */
+.banner {
+  text-align: center;
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-cohete {
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
+.banner h2 {
+  font-size: 3.5rem;
+  color: #2B2B82;
+  margin: 0.5rem 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+}
+
+.subtitulo {
+  color: #ff9900;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 0.75rem 0;
+}
+
+.detalle {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.75rem;
+}
+
+/* Fondo ondulado y slider (ahora estático) */
+.wave-background {
+  background-color: #1E1E50;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+#currentPage {
+  display: none;
+  /* Oculta el indicador de página */
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.slides {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Forzar 4 columnas para las 4 imágenes */
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+.slide {
+  width: 100%;
+  height: 520px;
+  border-radius: 12px;
+  color: #ffffff;
+  font-weight: 700;
+  border: 2px solid #ff9900;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #1E1E50;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, outline 0.2s;
+}
+
+.slide:hover,
+.slide:focus {
+  transform: scale(1.05);
+  outline: 3px solid #ff9900;
+}
+
+.slide-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.25rem;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 0 0 12px 12px;
+}
+
+.arrow {
+  display: none;
+  /* Oculta los botones de flechas */
+}
+
+/* Secciones informativas */
+.info-agua,
+.info-densidad,
+.estados-container,
+.info-section {
+  padding: 3rem 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.info-agua h2,
+.info-densidad h2,
+.estados-container h2,
+.info-section h2 {
+  text-align: center;
+  font-size: 2.25rem;
+  color: #2B2B82;
+  margin-bottom: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.info-agua p,
+.info-densidad p,
+.estados-container p,
+.info-section p {
+  margin: 1.25rem 0;
+  text-align: justify;
+  font-size: 1.1rem;
+}
+
+/* Bloques laterales y comparativos */
+.bloque-lateral {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.bloque-invertido {
+  flex-direction: row-reverse;
+}
+
+.bloque-comparativo {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.cuadro-naranja {
+  background-color: #ff9900;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 1.5rem;
+  text-align: center;
+  max-width: 450px;
+  border: 5px dotted #ffffff;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.cuadro-blanco {
+  background-color: #ffffff;
+  color: #333;
+  max-width: 450px;
+  padding: 1.5rem;
+  text-align: justify;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.mol-img {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+}
+
+.mol-img-grande {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+}
+
+.img-densidad,
+.img-vidrio {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.img-vidrio {
+  border-radius: 50%;
+  margin-top: 0.75rem;
+}
+
+.imagen-comparativa {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.imagen-comparativa img {
+  display: block;
+}
+
+/* Tarjetas de propiedades organolépticas */
+.tarjetas-propiedades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  justify-content: center;
+  /* Centra la cuadrícula horizontalmente */
+  justify-items: center;
+  /* Centra cada tarjeta dentro de su celda */
+}
+
+.tarjeta {
+  background-color: #f9f9ff;
+  border: 3px solid #ff9900;
+  border-radius: 15px;
+  padding: 1.75rem;
+  width: 100%;
+  max-width: 260px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, outline 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-claridad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarjeta:hover,
+.tarjeta:focus {
+  background-color: #fff4e6;
+  transform: scale(1.05);
+  outline: 3px solid #ff9900;
+}
+
+.tarjeta .icono {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+.tarjeta h3 {
+  font-size: 1.3rem;
+  color: #2B2B82;
+  font-weight: 700;
+  margin: 0.75rem 0;
+}
+
+.tarjeta .detalle {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 0.75rem;
+  transition: opacity 0.3s ease;
+}
+
+.oculto {
+  display: none;
+}
+
+/* Carrusel de lectura */
+.carrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 2.5rem auto;
+  gap: 1.5rem;
+}
+
+.carrusel-imagenes {
+  width: 450px;
+  height: 650px;
+  overflow: hidden;
+  position: relative;
+  border: 4px solid #ff9900;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slide-carrusel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slide-carrusel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slide-carrusel.activo {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.carrusel-btn {
+  background-color: #ff9900;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease, outline 0.2s;
+}
+
+.carrusel-btn:hover,
+.carrusel-btn:focus {
+  background-color: #e68a00;
+  transform: scale(1.1);
+  outline: 2px solid #ffffff;
+}
+
+/* Estados de agregación */
+.estados-container {
+  background-color: #ffffff;
+}
+
+.estados-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-items: center;
+}
+
+.estado {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 1.75rem;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.estado:hover,
+.estado:focus {
+  transform: scale(1.05);
+}
+
+.estado img {
+  width: 100%;
+  max-width: 260px;
+  height: 160px;
+  object-fit: cover;
+  margin-bottom: 1.25rem;
+  border-radius: 8px;
+}
+
+.estado h3 {
+  color: #2B2B82;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.estado p {
+  color: #333;
+  font-size: 1.05rem;
+}
+
+/* Secciones de información */
+.info-section {
+  background-color: #ffffff;
+}
+
+.info-section.alt {
+  background-color: #ffffff;
+}
+
+.info-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.info-text {
+  max-width: 600px;
+  font-size: 1.1rem;
+}
+
+.info-text ul {
+  padding-left: 1.75rem;
+  margin-top: 0.75rem;
+}
+
+.info-text ul li {
+  margin-bottom: 0.75rem;
+}
+
+.info-img img {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.info-img2 img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info-agua,
+.info-densidad,
+.estados-container,
+.info-section {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .banner h2 {
+    font-size: 3rem;
+  }
+
+  .subtitulo {
+    font-size: 1.25rem;
+  }
+
+  .logo-cohete {
+    max-width: 240px;
+  }
+
+  .slide {
+    width: 100%;
+    height: 460px;
+  }
+
+  .slide-text {
+    font-size: 1.1rem;
+  }
+
+  .carrusel-imagenes {
+    width: 400px;
+    height: 600px;
+  }
+
+  .mol-img,
+  .img-densidad,
+  .img-vidrio {
+    max-width: 200px;
+  }
+
+  .mol-img-grande {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner h2 {
+    font-size: 2.5rem;
+  }
+
+  .subtitulo {
+    font-size: 1.1rem;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+  }
+
+  .header-links a {
+    font-size: 1rem;
+    gap: 1rem;
+  }
+
+  .slide {
+    width: 100%;
+    height: 360px;
+  }
+
+  .slide-text {
+    font-size: 1rem;
+  }
+
+  .carrusel-imagenes {
+    width: 320px;
+    height: 480px;
+  }
+
+  .mol-img,
+  .img-densidad,
+  .img-vidrio {
+    max-width: 180px;
+  }
+
+  .mol-img-grande {
+    max-width: 240px;
+  }
+
+  .cuadro-naranja,
+  .cuadro-blanco {
+    min-width: 240px;
+    max-width: 90%;
+  }
+
+  .bloque-lateral,
+  .bloque-comparativo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-agua h2,
+  .info-densidad h2,
+  .estados-container h2,
+  .info-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .arrow,
+  .carrusel-btn {
+    padding: 0.6rem 0.8rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner h2 {
+    font-size: 2rem;
+  }
+
+  .subtitulo {
+    font-size: 0.95rem;
+  }
+
+  .detalle {
+    font-size: 0.9rem;
+  }
+
+  .header-links a {
+    font-size: 0.9rem;
+    gap: 0.75rem;
+  }
+
+  .logo-text {
+    font-size: 1.25rem;
+  }
+
+  .slide {
+    width: 100%;
+    height: 300px;
+  }
+
+  .slide-text {
+    font-size: 0.95rem;
+  }
+
+  .carrusel-imagenes {
+    width: 280px;
+    height: 420px;
+  }
+
+  .tarjeta {
+    max-width: 100%;
+  }
+
+  .info-agua h2,
+  .info-densidad h2,
+  .estados-container h2,
+  .info-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .info-agua p,
+  .info-densidad p,
+  .estados-container p,
+  .info-section p {
+    font-size: 1rem;
+  }
+
+  .mol-img,
+  .img-densidad,
+  .img-vidrio {
+    max-width: 160px;
+  }
+
+  .mol-img-grande {
+    max-width: 200px;
+  }
+}
+
+.lluvia {
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+  font-family: 'Verdana', sans-serif;
+  line-height: 1.6;
+}
+
+.lluvia-contenido {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.lluvia h2 {
+  font-size: 1.9rem;
+  text-align: center;
+  color: #2B2B82;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.bloque {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-left: 6px solid #ffffff;
+  border-radius: 8px;
+}
+
+.bloque h3 {
+  font-size: 1.3rem;
+  color: #2B2B82;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.bloque p {
+  margin: 0.5rem 0;
+}
+
+.bloque ul {
+  padding-left: 1rem;
+}
+
+.bloque ul li {
+  margin-bottom: 0.5rem;
+  list-style: disc;
+}
+.ola-contenedor {
+  width: 100vw;       /* 100% del ancho de la pantalla */
+  height: 100vh;      /* 100% del alto de la pantalla */
+  overflow: hidden;   /* Oculta el exceso si la imagen es muy grande */
+}
+
+.ola-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Recorta la imagen sin deformarla */
+  display: block;
+}

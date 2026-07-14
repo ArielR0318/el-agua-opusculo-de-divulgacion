@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Opúsculo de divulgación científica sobre el agua, sus propiedades, estados y relevancia.">
+  <meta name="keywords" content="agua, ciencia, divulgación, propiedades del agua, educación">
+  <title>El Agua - Opúsculo de Divulgación</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="logo-text">EL AGUA: OPÚSCULO DE DIVULGACIÓN</div>
+    <nav class="header-links">
+      <a href="curiosidades.html" aria-label="Ver curiosidades sobre el agua">
+        <span class="icon">💧</span>Curiosidades
+      </a>
+      <a href="autores.html" aria-label="Información sobre los autores">
+        <span class="icon">👤</span>Autores
+      </a>
+      <a href="docs/opusculo.pdf" download aria-label="Descargar PDF del opúsculo">
+        <span class="icon">⬇️</span>PDF
+      </a>
+
+
+    </nav>
+  </header>
+
+
+  <!-- Banner principal -->
+  <section class="banner">
+    <img src="imagenes/logo exploradores.png" alt="Logo de Explorador Ediciones con diseño de cohete"
+      class="logo-cohete" loading="lazy">
+    <h2>EL AGUA</h2>
+    <p class="subtitulo">OPÚSCULO DE DIVULGACIÓN</p>
+    <p class="detalle">CA BUAP 249 – CA BUAP 138CA<br>Ejemplar digital. Julio-Diciembre 2025.</p>
+  </section>
+
+  <!-- Fondo ondulado y slider -->
+  <div class="wave-background">
+    <div class="slider">
+      <div class="slides">
+        <div class="slide" onclick="scrollToAgua()" style="background-image: url('imagenes/imag1.png');" role="button"
+          tabindex="0" aria-label="Ir a la sección ¿Qué es el agua?">
+          <div class="slide-text">¿QUÉ ES EL AGUA?</div>
+        </div>
+        <div class="slide" onclick="scrollToPropiedades()" style="background-image: url('imagenes/imag2.png');"
+          role="button" tabindex="0" aria-label="Ir a la sección Propiedades Organolépticas">
+          <div class="slide-text">PROPIEDADES ORGANOLÉPTICAS DEL AGUA</div>
+        </div>
+        <div class="slide" onclick="scrollToDensidad()" style="background-image: url('imagenes/imag3.png');"
+          role="button" tabindex="0" aria-label="Ir a la sección Densidad del Agua">
+          <div class="slide-text">DENSIDAD DEL AGUA</div>
+        </div>
+        <div class="slide" onclick="scrollToEstados()" style="background-image: url('imagenes/imag4.png');"
+          role="button" tabindex="0" aria-label="Ir a la sección Estados de Agregación">
+          <div class="slide-text">AGUA EN SUS DIFERENTES ESTADOS DE AGREGACIÓN</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección informativa ¿Qué es el agua? -->
+  <section id="info-agua" class="info-agua">
+    <h2><strong>¿QUÉ ES EL AGUA?</strong></h2>
+    <p>
+      El agua es una sustancia química que está compuesta de dos elementos, hidrógeno y oxígeno. Cadamolécula de
+      agua contiene dos átomos de hidrógeno (H) y uno de oxígeno (O). Estos átomos se unen para formar una molécula
+      de agua, que se escribe como H<sub>2</sub>O.
+    </p>
+    <div class="bloque-lateral">
+      <img src="imagenes/molecula1.png" alt="Ilustración de una molécula de agua con átomos de hidrógeno y oxígeno"
+        class="mol-img-grande" loading="lazy">
+      <div class="cuadro-naranja cuadro-con-cuadros">
+        Aquí hay una forma sencilla de imaginarlo: Imagina dos pelotas pequeñas (los átomos de hidró-geno) pegadas
+        a una pelota más grande (el átomo de oxígeno). La pelota grande (oxígeno) es como la cabeza de un Mickey
+        Mouse, y las dos pelotas pequeñas (hidró-geno) son como las orejas.
+      </div>
+    </div>
+    <p>
+      Las moléculas de agua se comportan como pequeños imanes que se atraen entre sí formando puentes de hidrógeno,
+      lo que ayuda a que el agua tenga propiedades especiales, como poder disolver muchas cosas y formar gotas.
+    </p>
+    <div class="bloque-lateral">
+      <div class="cuadro-naranja borde-circulos">
+        Así es como se ve una molécula de agua.
+      </div>
+      <img src="imagenes/molecula2.png" alt="Diagrama de una molécula de agua mostrando el ángulo entre átomos"
+        class="mol-img" loading="lazy">
+    </div>
+    <div class="bloque-lateral bloque-invertido">
+      <div class="cuadro-naranja borde-circulos">
+        Cuando estas moléculas se juntan forman el agua que bebemos, usamos para bañarnos, y vemos en los
+        ríos, lagos y océanos.
+      </div>
+      <img src="imagenes/molecula3.png" alt="Ilustración de múltiples moléculas de agua unidas" class="mol-img"
+        loading="lazy">
+    </div>
+  </section>
+
+  <!-- Sección Propiedades Organolépticas -->
+  <section id="info-propiedades" class="info-agua">
+    <h2><strong>PROPIEDADES ORGANOLÉPTICAS DEL AGUA</strong></h2>
+    <p>
+      Las propiedades organolépticas del agua incluyen su sabor, olor, color y claridad, y son importantes
+      para evaluar su calidad y aceptabilidad para el consumo humano.
+    </p>
+    <div class="tarjetas-propiedades">
+      <div class="tarjeta" onclick="toggleDetalle(this)" role="button" tabindex="0"
+        aria-label="Mostrar detalle de Sabor">
+        <div class="icono">👅</div>
+        <h3>Sabor</h3>
+        <p class="detalle oculto">El agua potable debe tener un sabor neutro, sin notas amargas, metálicas o saladas.
+        </p>
+      </div>
+      <div class="tarjeta" onclick="toggleDetalle(this)" role="button" tabindex="0"
+        aria-label="Mostrar detalle de Olor">
+        <div class="icono">👃</div>
+        <h3>Olor</h3>
+        <p class="detalle oculto">El agua no debe tener olor. Un olor fuerte o extraño puede indicar contaminación.</p>
+      </div>
+      <div class="tarjeta" onclick="toggleDetalle(this)" role="button" tabindex="0"
+        aria-label="Mostrar detalle de Color">
+        <div class="icono">👁️</div>
+        <h3>Color</h3>
+        <p class="detalle oculto">El agua limpia debe ser incolora. Tonos amarillentos, verdosos o marrones indican
+          impurezas.</p>
+      </div>
+      <div class="tarjeta" onclick="toggleDetalle(this)" role="button" tabindex="0"
+        aria-label="Mostrar detalle de Claridad">
+        <div class="icono">💧</div>
+        <h3>Claridad</h3>
+        <p class="detalle oculto">El agua debe ser transparente. La turbidez indica partículas en suspensión.</p>
+      </div>
+    </div>
+    <div class="cuadro-naranja">
+      <p>
+        Las propiedades organolépticas son las características de una sustancia que pueden ser percibidas por los
+        sentidos humanos, como el gusto, el olfato, la vista, el tacto y el oído.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección Densidad del agua -->
+  <section id="info-densidad" class="info-densidad">
+    <h2><strong>DENSIDAD DEL AGUA</strong></h2>
+    <p>La densidad es una propiedad que nos dice cuán apretadas están las cosas en un espacio. </p>
+    <p><strong>Imagina que tienes una caja llena de pelotas.</strong></p>
+    <p>Si pones muchas pelotas en la caja, estará muy llena y pesada. Eso es como tener una alta densidad. Si pones
+      pocas pelotas, estará más ligera. Eso es una baja densidad. La densidad del agua es entonces como lo pesada o
+      ligera que es <strong>cuando ocupa un mismo</strong> tamaño.</p>
+    <div class="bloque-comparativo">
+      <div class="cuadro-naranja">
+        <strong>Agua dulce</strong><br>
+        Es el agua que bebemos y usamos para bañarnos. No tiene mucha sal, por lo que su densidad es menor.
+      </div>
+      <div class="cuadro-naranja">
+        <strong>Agua salada</strong><br>
+        Es el agua del mar. Tiene mucha sal, lo que la hace más densa. Esto significa que las cosas flotan más
+        fácilmente en el agua salada que en el agua dulce.
+      </div>
+    </div>
+    <div class="imagen-comparativa">
+      <img src="imagenes/comparacion.png" alt="Comparación visual entre agua dulce y salada" class="img-densidad"
+        loading="lazy">
+    </div>
+    <div class="cuadro-naranja">
+      Imagina que tienes dos vasos, uno con agua dulce y otro con agua salada. Si pones un huevo en el agua
+      dulce, el huevo puede hundirse. Pero si lo pones en el agua salada, puede flotar, porque el agua salada
+      es más densa
+    </div>
+    <br>
+    <h1><strong>la densidad del agua cambia con la temperatura</strong></h1>
+    <div class="bloque-lateral">
+      <img src="imagenes/botella_hielo.jpeg" alt="Botella con agua congelada mostrando densidad" class="img-densidad"
+        loading="lazy">
+      <div class="cuadro-naranja borde-circulos">
+        <strong>
+          Cuando el agua se calienta por arriba de los 5 grados centígrados, su densidad disminuye desde
+          1000.00 kg/m³, hasta 958.50 kg/m³ al llegar a 100 grados centígrados, en que empieza su evaporación.
+          Conforme baja su densidad, las moléculas del agua están más separadas, haciendo que el agua sea
+          más ligera para su tamaño Cuando el agua se enfría se va haciendo más densa hasta llegar a su densidad
+          máxima a 5 y 4 grados centígrados con un valor de 1000.00 kg/m³. Esto significa que las molé culas del
+          agua están muy juntas, haciendo que el agua sea más pesada para su tamaño.
+        </strong>
+      </div>
+    </div>
+    <p>Pero al bajar aún más su temperatura ¡se vuelve a hacer menos densa! Así a 0 grados centígrados, cuando el
+      agua alcanza el punto de solidificación para empezar a convertirse en hielo, su densidad disminuye a un valor
+      de 999.82 kg/m³, y cuando se forma el hielo estando aún a 0 grados centígrados su densidad disminuye mucho
+      llegando a 917.00 kg/m³. </p>
+    <div class="bloque-comparativo">
+      <div class="cuadro-blanco">
+        Esto significa que el agua en forma de hielo es más ligera que el agua líquida, por eso los cubitos de hielo
+        flotan en tu bebida. También es por esto que no se debe congelar agua en recipientes de vidrio, ya que al
+        disminuir la densidad del agua, cabe menos masa en el mismo volumen y la masa que no cabe puede provocar
+        la ruptura del recipiente. Cuando se congela el agua en botellas de plástico flexibles, entonces éstas se
+        inflan un poco, por la misma razón.
+      </div>
+      <div class="cuadro-naranja">
+        <strong>¡No se te ocurra congelar agua en recipientes de vidrio!</strong>
+        <img src="imagenes/botella_vidrio.jpg" alt="Botella de vidrio rota por congelación" class="img-vidrio"
+          loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Estados de Agregación -->
+  <section id="info-estados" class="estados-container">
+    <h2><strong>Agua en sus Diferentes Estados de Agregación</strong></h2>
+    <p>El agua se presenta como sólido (hielo), líquido, o gas dependiendo de la temperatura (T) y presión (P) a
+      la que se encuentre. Estas formas se llaman estados de agregación. A presión atmosférica al nivel del mar (P = 1
+      atmósfera):</p>
+    <div class="estados-grid">
+      <div class="estado">
+        <img src="imagenes/solido.png" alt="Hielo representando el estado sólido del agua" loading="lazy">
+        <h3>Sólido (T < 0 °C)</h3>
+            <p>Cuando el agua se enfría mucho, se congela y se convierte en hielo. El hielo es agua en estado sólido.
+              Es duro y tiene forma definida. Puedes verlo en cubitos de hielo o en la nieve durante el invierno.</p>
+      </div>
+      <div class="estado">
+        <img src="imagenes/liquido.jpg" alt="Agua líquida en un vaso" loading="lazy">
+        <h3>Líquido (a T = 0 -100 °C):</h3>
+        <p>Este es el estado en el que normalmente encontramos el agua. Puedes beberla, nadar en ella y usarla para
+          lavar.
+          El agua en estado líquido no tiene forma fija y puede adaptarse a la forma de cualquier recipiente.</p>
+      </div>
+      <div class="estado">
+        <img src="imagenes/gaseoso.png" alt="Vapor de agua saliendo de una olla" loading="lazy">
+        <h3>Gas o vapor (a T > 100 °C):</h3>
+        <p>Cuando calientase hierves agua en una olla, se convierte en vapor de agua. El vapor de agua es agua en
+          estado gaseoso. Cuando está muy diluido no lo puedes ver, pero puedes sentirlo cuando el agua hirviendo
+          suelta el vapor caliente.</p>
+      </div>
+      <div class="estado-texto">
+        Estos estados de agregación del agua pueden cambiar. Por ejemplo,
+        cuando el hielo se derrite, se convierte en agua líquida. Cuando el
+        agua se calienta e hierve, se convierte en vapor de agua. Y cuando
+        el vapor de agua se enfría, se convierte en agua líquida otra vez, y
+        si se enfría aún más, se convierte en hielo.
+      </div>
+    </div>
+  </section>
+
+  <!-- Carrusel de Lectura -->
+  <section id="carrusel-lectura" class="info-agua">
+    <h2 style="text-align: center;">📘 Lectura Interactiva</h2>
+    <div class="carrusel">
+      <button class="carrusel-btn izquierda" aria-label="Página anterior">⏪</button>
+      <div class="carrusel-imagenes">
+        <div class="slide-carrusel activo"><img src="imagenes/pagina11.jpg" alt="Página 11 del opúsculo" loading="lazy">
+        </div>
+        <div class="slide-carrusel"><img src="imagenes/pagina12.jpg" alt="Página 12 del opúsculo" loading="lazy"></div>
+        <div class="slide-carrusel"><img src="imagenes/pagina13.jpg" alt="Página 13 del opúsculo" loading="lazy"></div>
+        <div class="slide-carrusel"><img src="imagenes/pagina14.jpg" alt="Página 14 del opúsculo" loading="lazy"></div>
+        <div class="slide-carrusel"><img src="imagenes/pagina15.jpg" alt="Página 15 del opúsculo" loading="lazy"></div>
+        <div class="slide-carrusel"><img src="imagenes/pagina16.jpg" alt="Página 16 del opúsculo" loading="lazy"></div>
+        <div class="slide-carrusel"><img src="imagenes/pagina17.jpg" alt="Página 17 del opúsculo" loading="lazy"></div>
+        <div class="slide-carrusel"><img src="imagenes/pagina18.jpg" alt="Página 18 del opúsculo" loading="lazy"></div>
+        <div class="slide-carrusel"><img src="imagenes/pagina19.jpg" alt="Página 19 del opúsculo" loading="lazy"></div>
+        <div class="slide-carrusel"><img src="imagenes/pagina20.jpg" alt="Página 20 del opúsculo" loading="lazy"></div>
+        <div class="slide-carrusel"><img src="imagenes/pagina21.jpg" alt="Página 21 del opúsculo" loading="lazy"></div>
+      </div>
+      <button class="carrusel-btn derecha" aria-label="Página siguiente">⏩</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
